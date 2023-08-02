@@ -4,7 +4,10 @@ import Map from "../../assets/map.png";
 import Friend from "../../assets/friend.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
-import { useMutation, QueryClient } from '@tanstack/react-query'
+import { useMutation, QueryClient} from '@tanstack/react-query'
+import { useQueryClient } from '@tanstack/react-query';
+import { makeRequest } from "../../axios";
+
 
 const Share = () => {
   const [file, setFile] = useState(null);
