@@ -3,6 +3,7 @@ import "./comments.scss";
 import { AuthContext } from "../../context/authContext";
 import { makeRequest } from "../../axios";
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query'
+import { useState } from 'react'
 import moment from "moment";
 
 const Comments = ({postId}) => {
