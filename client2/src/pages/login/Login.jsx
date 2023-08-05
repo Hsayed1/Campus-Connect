@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import "./login.scss";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [inputs, setInputs] = useState({
-    username:"",
-    password:"",
+    username: "",
+    password: "",
   });
 
   const [err, setErr] = useState(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleChange = e =>{
+  const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
+  };
 
   const { login } = useContext(AuthContext);
 
@@ -26,22 +26,22 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(inputs);
-      navigate("/")
-    }catch(err) {
-      setErr(err.response.data)
+      navigate("/");
+    } catch (err) {
+      setErr(err.response.data);
     }
-    
   };
 
   return (
     <div className="login">
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
+          <h1>Campus Connect</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            Looking to expand your social circle, make new friends, and connect
+            with fellow students on campus? Campus Connect is
+            here to make your college life more enjoyable, engaging, and
+            connected.
           </p>
           <span>Don't you have an account?</span>
           <Link to="/register">
@@ -51,8 +51,18 @@ const Login = () => {
         <div className="right">
           <h1>Login</h1>
           <form>
-            <input type="text" placeholder="Username" name="username" onChange={handleChange}/>
-            <input type="password" placeholder="Password" name="password" onChange={handleChange}/>
+            <input
+              type="text"
+              placeholder="Username"
+              name="username"
+              onChange={handleChange}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+            />
             {err & err}
             <button onClick={handleLogin}>Login</button>
           </form>

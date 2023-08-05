@@ -7,4 +7,4 @@ router.get("/", getPosts)
 router.post("/", addPost)
 
 
-export default router
+export default router 

@@ -9,24 +9,34 @@ export const AuthContextProvider = ({ children }) => {
   );
 
   const login = async (inputs) => {
-    //TO DO
+    try {
+      // TO DO
 
-    const res = axios.post("http://localhost:8800/api/auth/login", inputs, {
-      withCredentials: true,
-    });
+      const res = await axios.post("http://localhost:8800/api/auth/login", inputs, {
+        withCredentials: true,
+      });
 
-    setCurrentUser(res.data)
+      setCurrentUser(res.data);
 
-    // setCurrentUser({
-    //   id: 1,
-    //   name: "John Doe",
-    //   profilePic:
-    //     "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    // });
+      // setCurrentUser({
+      //   id: 1,
+      //   name: "John Doe",
+      //   profilePic:
+      //     "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      // });
+    } catch (error) {
+      // Handle the error here
+      console.error("Error during login:", error);
+    }
   };
 
   useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(currentUser));
+    try {
+      localStorage.setItem("user", JSON.stringify(currentUser));
+    } catch (error) {
+      // Handle the error here
+      console.error("Error saving user to localStorage:", error);
+    }
   }, [currentUser]);
 
   return (
