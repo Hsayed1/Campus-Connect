@@ -22,7 +22,7 @@ const Share = () => {
     }catch(err){
       console.log(err);
     }
-  }
+  };
 
   const {currentUser} = useContext(AuthContext);
 
@@ -35,7 +35,7 @@ const Share = () => {
     onSuccess: () => {
       queryClient.invalidateQueries(['posts']);
     },
-  })
+  });
 
   const handleClick = async(e) =>{
     e.preventDefault();
