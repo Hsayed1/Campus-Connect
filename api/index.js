@@ -4,8 +4,8 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import relationshipRoutes from "./routes/relationships.js";
-
 import commentRoutes from "./routes/comments.js";
+
 import likeRoutes from "./routes/likes.js";
 import cors from "cors";
 import multer from "multer";
@@ -26,7 +26,7 @@ app.use(cookieParser())
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, '../client2/public/upload');
+      cb(null, '../client/public/upload');
     },
     filename: function (req, file, cb) {
       cb(null, Date.now() + file.originalname);

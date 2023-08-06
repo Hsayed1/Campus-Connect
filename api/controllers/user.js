@@ -23,7 +23,7 @@ export const updateUser = (req,res)=>{
         const q = "UPDATE users SET `name`=?, `city`=?, `website`=?, `profilePic`=?, `coverPic`=? WHERE id=? "
 
         db.query(q, [
-            req.body.name,
+            req.body.name, 
             req.body.city,
             req.body.website,
             req.body.coverPic,
