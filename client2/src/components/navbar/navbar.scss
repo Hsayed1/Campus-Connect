@@ -37,7 +37,7 @@
           border: none;
           width: 500px;
           background-color: transparent;
-          color: themed("textColor");
+          color: themed(blue);
 
           @include mobile{
             display: none;
