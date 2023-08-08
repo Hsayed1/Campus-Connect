@@ -3,9 +3,10 @@ Our goal was to create a social media platform  which is designed specifically f
 
 # Steps to Run
 1. Clone the respository into IDE of your choice
-2. Run NPM install and yarn
-3. In the connect.js file located in /api/connect.js make sure to adjust the credentials so that the SQL connection is configured to your machine
-4. Run the following SQL scripts in SQL workbench:
+2. Intall yarn if not installed
+3. Run NPM install and yarn in the root folder
+4. In the connect.js file located in /api/connect.js make sure to adjust the credentials so that the SQL connection is configured to your machine
+5. Run the following SQL scripts in SQL workbench:
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
