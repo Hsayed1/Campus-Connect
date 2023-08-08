@@ -81,7 +81,10 @@ CREATE TABLE `comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 6. cd into the api folder then run yarn start (Console should output that the API is working and that the database is connected if the above steps are done correctly)
-7. cd into the client2 and run yarn start (localhost:3000 should be up and running)
+If database is not being connected try running the following queries in MYSQL workbench:
+   1. ALTER USER 'yourusername'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yourpassword';
+   2. flush privileges;
+8. cd into the client2 and run yarn start (localhost:3000 should be up and running)
 # Division of work
 Hamed Sayed: Selecting posts, adding posts, fetching profile, follow/unfollow <br />
 Revanth Cherukuri: Uploading files, fetching comments, adding comments, liking/unliking comments, updating user <br />
