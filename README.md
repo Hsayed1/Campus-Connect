@@ -81,3 +81,7 @@ CREATE TABLE `comments` (
 
 6. cd into the api folder then run yarn start (Console should output that the API is working and that the database is connected if the above steps are done correctly)
 7. cd into the client2 and run yarn start (localhost:3000 should be up and running)
+# Division of work
+Hamed Sayed: Selecting posts, adding posts, fetching profile, follow/unfollow
+Revanth Cherukuri: Uploading files, fetching comments, adding comments, updating user
+Nicholas Semaan: Setup tables, authentication process, login/regsister, delete post
