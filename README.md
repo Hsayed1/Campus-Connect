@@ -84,5 +84,5 @@ CREATE TABLE `comments` (
 7. cd into the client2 and run yarn start (localhost:3000 should be up and running)
 # Division of work
 Hamed Sayed: Selecting posts, adding posts, fetching profile, follow/unfollow <br />
-Revanth Cherukuri: Uploading files, fetching comments, adding comments, updating user <br />
+Revanth Cherukuri: Uploading files, fetching comments, adding comments, liking/unliking comments, updating user <br />
 Nicholas Semaan: Setup tables, authentication process, login/regsister, delete post <br />
