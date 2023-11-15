@@ -1,4 +1,4 @@
-# CS157a-Project
+
 Our goal was to create a social media platform  which is designed specifically for college students to connect with one another. The application is called CampusConnect. You’ll be able to follow other users and if they follow you back you will be considered friends. The overall application functionality of our platform is straightforward, users see posts from accounts they follow, and interacting with other posts via likes and comments simply acts as a count in the database. 
 
 # Steps to Run
